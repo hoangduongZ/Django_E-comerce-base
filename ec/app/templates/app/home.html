@@ -1,0 +1,185 @@
+{% extends 'app/base.html' %}
+<!-- Tải static -->
+{% load static %} {% block title %} Home {% endblock %} 
+{% comment %}banner {%endcomment %} 
+{% block banner_slider %}
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/banner-1.png' %}" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/banner-2.jpg' %}" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/banner-1.png' %}" class="d-block w-100" alt="banner">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/banner-2.jpg' %}" class="d-block w-100" alt="banner">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock banner_slider %} {% comment %}infor{% endcomment %} 
+{% block information %}
+<div class="container">
+	<div class="row bg-success text-center p-5 text-white border-bottom shadow">
+		<h1>DVH-lap</h1>
+		<small class="fs-5"
+			>DVH-lap chuyên cung cấp các sản phẩm laptop nhập khẩu từ mỹ 100%, với kinh nghiệm nhiều năm, chúng tôi luôn có sẵn và đủ các loại laptop phổ biến trên thị trường hiện nay, chúng tôi luôn đặt chất lượng sản phẩm và khách hàng lên hàng đầu, sự hài lòng của quí khách hàng là niềm vui của chúng tôi ! </small
+		>
+	</div>
+</div>
+{% endblock %} {% comment %}Main content{% endcomment %} 
+{% block main_content %}
+<div class="home container mt-5">
+	<h2>Thương hiệu nổi tiếng</h2>
+	<br /><br />
+	<div class="row">
+		<div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand dell">
+				<a href="{% url 'category' 'DELL' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/dell.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+        <div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand lenovo">
+				<a href="{% url 'category' 'LENOVO' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/lenovo.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+        <div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand hp ">
+				<a href="{% url 'category' 'HP' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/hp.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+    <br><br>
+
+	<div class="row">
+		<div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand dell">
+				<a href="{% url 'category' 'ASUS' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/asus.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+        <div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand lenovo">
+				<a href="{% url 'category' 'MSI' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/msi.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+        <div
+			class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+			data-wow-duration="1s"
+			data-row-delay="0.6s"
+			style="
+				animation-duration: 1s;
+				animation-delay: 0.6s;
+				animation-name: none;
+			"
+        >
+			<div class="goodnesssec brand hp ">
+				<a href="{% url 'category' 'MACBOOK' %}">
+					<div class="goodnessseccont text-center">
+						<img
+							src="{% static 'app/images/logo_brand/macbook.png' %}"
+							class="img-responsive"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock main_content %}

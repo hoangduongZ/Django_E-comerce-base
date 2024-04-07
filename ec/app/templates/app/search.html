@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+<!-- Tải static -->
+{% load static %} 
+{% block title %} Search result {% endblock %} 
+{% block main_content %}
+<div class="container search my-5">
+        <div class="col-sm-12">
+            <div class="product_inner">
+                {% for prod in product %}
+                    <div class=" col-sm-6 text-center mb-4 hover-shadow">
+                        <a href="{% url 'product-detail' prod.id %}" class="btn">
+                            <div class="product_item">
+                                <img src="{{prod.product_image.url}}" width="300px" height="200px" alt="{{prod.id}}">
+                                <div class="fw-bold fs-2">{{prod.title}}</div>
+                                <span class="number fw-bold fs-2 text-danger">
+                                    {{prod.discounted_price}} 
+                                </span>
+                                <small class="number fs-4 fw-light text-decoration-line-through">
+                                    {{prod.selling_price}}
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+</div>
+{% endblock main_content %}

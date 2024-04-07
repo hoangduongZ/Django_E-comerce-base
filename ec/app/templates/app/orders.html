@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+<!-- Tải static -->
+{% load static %} 
+{% block title %} Orders {% endblock %} 
+{% block main_content %}
+<div class="container my-5">
+    <div class="row">
+        <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid">
+                    <a href="{% url 'orders' %}" class="btn btn-primary">Orders</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 offset-sm-1">
+            {% for op in order_placed %}
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="{{op.product.product_image.url}}" alt="" height="100" width="100" class="img-fluid">
+                </div>
+                <div class="col-sm-7">
+                    <p>Product : {{op.product.title}}</p>
+                    <p>Quantity : {{op.quantity}}</p>
+                    <p>Price : {{op.total_cost}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Orders status: {{op.status}}</p>
+                    {% if op.status == 'Pending' %}
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 1%;" aria-valuenow = "20" aria-valuemin= "0"></div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock main_content %}

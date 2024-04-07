@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+<!-- Tải static -->
+{% load static %} {% block title %} Contact {% endblock %} 
+{% block main_content %}
+    <div class="container contact mt-5">
+        <h2 >Liên hệ</h2>
+        <br>
+        <div class="row container ">
+            <address class="fs4 border">Address  : Thuỵ Liên, Thái Thuỵ, Thái Bình</address>
+            <p class="fs4 border"><span>Email  : </span><a href="mailto:20200047@eaut.edu.vn">    20200047@eaut.edu.vn</a></p>
+            <p class="fs4 border">Phone    : <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p class="fs4 border">Insta    : <a href="instagram.com/duonghoang">instagram.com/duonghoang</a></p>
+            <p class="fs4 border">Google map    : <span id="map" style="width:500px;height:400px;" class="d-flex">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.968689419615!2d105.76398327494228!3d21.033938780616715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0bf0f1742f%3A0xe820ab53e8c05841!2zS8O9IFTDumMgWMOhIE3hu7kgxJDDrG5o!5e0!3m2!1svi!2s!4v1712420128460!5m2!1svi!2s" style="border:0; width:500px;height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
+            </span></p>
+            
+        </div>
+    </div>
+{% endblock main_content %}
