@@ -104,11 +104,10 @@ class ProfileView(View):
             user= request.user
             name= form.cleaned_data['name']
             locality= form.cleaned_data['locality']
-            city= form.cleaned_data['city']
             mobile= form.cleaned_data['mobile']
             state= form.cleaned_data['state']
             zipcode= form.cleaned_data['zipcode']
-            reg= Customer(user= user, name= name, locality= locality, mobile= mobile, city= city, state= state, zipcode= zipcode)
+            reg= Customer(user= user, name= name, locality= locality, mobile= mobile, state= state, zipcode= zipcode)
             reg.save()
             messages.success(request,"Congratutations ! Profile Save Successfully")
         else:
@@ -142,7 +141,6 @@ class updateAddress(View):
             add= Customer.objects.get(pk=pk)
             add.name= form.cleaned_data['name']
             add.locality= form.cleaned_data['locality']
-            add.city= form.cleaned_data['city']
             add.mobile= form.cleaned_data['mobile']
             add.state= form.cleaned_data['state']
             add.zipcode= form.cleaned_data['zipcode']

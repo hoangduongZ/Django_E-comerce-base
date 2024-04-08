@@ -13,7 +13,7 @@ class ProductModelAdmin(admin.ModelAdmin):
 
 @admin.register(Customer)
 class CustomerModelAdmin(admin.ModelAdmin):
-    list_display = ("id", "user", "locality", "city", "mobile", "state", "zipcode") 
+    list_display = ("id", "user", "locality", "mobile", "state", "zipcode") 
     
 
 @admin.register(Cart)
